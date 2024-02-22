@@ -27,4 +27,12 @@ export const Container = styled.div`
   &:hover{
     filter: brightness(0.8);
   }
+
+  &.light {
+    background-color: ${({ theme }) => theme.COLORS.TOMATO_400};
+  }
+
+  &.dark {
+    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+  }
 `

@@ -3,11 +3,11 @@ import { SlArrowLeft } from "react-icons/sl";
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
 import { DishDetails } from "../../components/DishDetails";
+import { QtySelect } from "../../components/QtySelect";
 import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 
 import { PiNewspaperClipping } from 'react-icons/pi';
-import { FiPlus, FiMinus } from 'react-icons/fi';
 
 import FoodImg from "../../assets/food1.png";
 
@@ -33,9 +33,7 @@ export function Dish() {
           }}        
         />
         <DishOrder>
-            <FiMinus />
-            <p>01</p>        
-            <FiPlus />  
+          <QtySelect value="01" />
           <Button value="pedir ∙ R$ 25,00" icon={PiNewspaperClipping} />
         </DishOrder>
       </Main>

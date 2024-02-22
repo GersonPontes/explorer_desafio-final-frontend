@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export function Input({ icon: Icon, id, ...rest }) {
+export function Input({ icon: Icon, id, className, ...rest }) {
   return (
-    <Container>
-      {Icon && <Icon size={20} />}
+    <Container className={className}>
+      {Icon && <Icon />}
       {id ? <input id={id} {...rest} /> : <input {...rest} />}
     </Container>
   );

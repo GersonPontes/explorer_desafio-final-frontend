@@ -3,23 +3,21 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
 
-  display: flex;
-  align-items: center;
-
   background-color: ${({ theme }) => theme.COLORS.DARK_900};
   border-radius: .8rem;
+  padding-right: 1.7rem;
   
-  &.dark {
-    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+  > label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    font-size: 1.6rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
   }
 
-  > svg {
-    margin-left: 1.6rem;
-  }
-
-  > input {
+  > select {
     width: 100%;
-    padding: 1.6rem 1.7rem;
+    padding: 1.6rem 1.4rem;
 
     border: none;
     background: transparent;
@@ -30,7 +28,8 @@ export const Container = styled.div`
     font-size: 1.6rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_200};
 
-    &::placeholder {
+    option {
+      background-color: ${({ theme }) => theme.COLORS.DARK_800};
       color: ${({ theme }) => theme.COLORS.LIGHT_500};
     }
   }

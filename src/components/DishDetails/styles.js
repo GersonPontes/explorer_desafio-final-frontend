@@ -9,6 +9,8 @@ export const Container = styled.div`
     width: 26.4rem;
     height: 26.4rem;
 
+    border-radius: 50%;
+
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
   }
@@ -39,9 +41,10 @@ export const IngredientsList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4.8rem;
 
   div {
-      width: fit-content;
-      margin-bottom: 2.4rem;
-    }
+    width: fit-content;
+  }
 `;

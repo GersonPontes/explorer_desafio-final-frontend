@@ -13,27 +13,12 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
   grid-area: "content";
   padding: 3.6rem 5.6rem 5.4rem;
 
   overflow-y: auto;
-
-  > a {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    line-height: 140%;
-    font-size: 2.4rem;
-    color: ${({ theme }) => theme.COLORS.LIGHT_300};
-
-    svg {
-      font-size: 2.2rem;
-    }
-  }
-`;
-
-export const DishOrder = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
 `;
