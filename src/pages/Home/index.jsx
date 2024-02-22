@@ -24,6 +24,24 @@ export function Home() {
               name: "Spaguetti Gambe >",
               image: "img",
               price: "79,97"
+            },
+            {
+              id: 3,
+              name: "Suco de maracujá",
+              image: "img",
+              price: "13,97"
+            },
+            {
+              id: 4,
+              name: "Suco de maracujá",
+              image: "img",
+              price: "13,97"
+            },
+            {
+              id: 5,
+              name: "Suco de maracujá",
+              image: "img",
+              price: "13,97"
             }
           ]} 
         />
@@ -38,6 +56,12 @@ export function Home() {
             },
             {
               id: 2,
+              name: "Peachy pastrie",
+              image: "img",
+              price: "32,97"
+            },
+            {
+              id: 3,
               name: "Peachy pastrie",
               image: "img",
               price: "32,97"
@@ -58,6 +82,12 @@ export function Home() {
               name: "Suco de maracujá",
               image: "img",
               price: "13,97"
+            },
+            {
+              id: 3,
+              name: "Peachy pastrie",
+              image: "img",
+              price: "32,97"
             }
           ]} 
         />

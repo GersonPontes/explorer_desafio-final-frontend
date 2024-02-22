@@ -16,7 +16,7 @@ export function SignIn() {
         <InputWrapper title="Email" type="text" id="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
         <InputWrapper title="Senha" type="password" id="password" placeholder="No mínimo 6 caracteres" />
         <Button value="Entrar" />
-        <ButtonText value="Criar uma conta" />
+        <ButtonText value="Criar uma conta" href="/register" />
       </Form>
     </Container>
   );

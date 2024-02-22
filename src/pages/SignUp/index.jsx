@@ -17,7 +17,7 @@ export function SignUp() {
         <InputWrapper title="Email" type="text" id="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
         <InputWrapper title="Senha" type="password" id="password" placeholder="No mínimo 6 caracteres" />
         <Button value="Criar conta" />
-        <ButtonText value="Já tenho uma conta" />
+        <ButtonText value="Já tenho uma conta" href="/" />
       </Form>
     </Container>
   );
