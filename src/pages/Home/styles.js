@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   width: 100%;
@@ -18,7 +19,15 @@ export const Main = styled.div`
   gap: 2.4rem;
 
   grid-area: "content";
-  padding: 3.6rem 5.6rem 5.4rem;
+  padding: 2.4rem 10rem 5.4rem;
 
   overflow-y: auto;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+    padding: 2.4rem 8rem 5.4rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    padding: 3.6rem 5.6rem 5.4rem;
+  }
 `;

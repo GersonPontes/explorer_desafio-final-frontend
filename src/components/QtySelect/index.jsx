@@ -5,7 +5,7 @@ export function QtySelect({ value }) {
   return (
     <Container>
       <FiMinus />
-        <p>{value}</p>      
+      <p>{value}</p>      
       <FiPlus />  
     </Container>
   );

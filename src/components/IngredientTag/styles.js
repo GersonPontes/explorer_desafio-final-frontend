@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: fit-content;
+  height: fit-content;
   display: flex;
   align-items: center;
   gap: .6rem;
@@ -15,8 +17,4 @@ export const Container = styled.div`
   font-size: 1.4rem;
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   text-align: center;
-
-  &.light {
-    background-color: ${({ theme }) => theme.COLORS.LIGHT_600} ;
-  }
 `;

@@ -1,5 +1,4 @@
-import { Container } from "./styles";
-import { Select } from "../Select";
+import { Container, Select } from "./styles";
 
 export function SelectWrapper({ title, id, ...rest }) {
   return (
@@ -8,10 +7,12 @@ export function SelectWrapper({ title, id, ...rest }) {
         {title}
       </label>
 
-      <Select 
-        id={id}
-        {...rest}
-      />
+      <Select id={id} {...rest}>
+        <option value="meal">Refeição</option>  
+        <option value="dessert">Sobremesa</option>  
+        <option value="drink">Bebida</option>  
+      </Select>
+
     </Container>
   );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   width: 100%;
@@ -15,6 +16,8 @@ export const Container = styled.div`
 
   > svg {
     margin-left: 1.6rem;
+    font-size: 2.4rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
   }
 
   > input {
@@ -30,8 +33,20 @@ export const Container = styled.div`
     font-size: 1.6rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_200};
 
+    @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+      padding: 1.6rem 1.4rem;
+    }
+
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.LIGHT_500};
+
+      @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        font-size: 1.6rem;
+      }
     }
   }
 `;

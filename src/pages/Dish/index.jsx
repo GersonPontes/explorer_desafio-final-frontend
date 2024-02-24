@@ -1,13 +1,9 @@
-import { Container, Main, DishOrder } from "./styles";
+import { Container, Main } from "./styles";
 import { SlArrowLeft } from "react-icons/sl";
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
 import { DishDetails } from "../../components/DishDetails";
-import { QtySelect } from "../../components/QtySelect";
-import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
-
-import { PiNewspaperClipping } from 'react-icons/pi';
 
 import FoodImg from "../../assets/food1.png";
 
@@ -31,11 +27,7 @@ export function Dish() {
               {id: 6, name: "tomate"}
             ]
           }}        
-        />
-        <DishOrder>
-          <QtySelect value="01" />
-          <Button value="pedir ∙ R$ 25,00" icon={PiNewspaperClipping} />
-        </DishOrder>
+        />     
       </Main>
       <Footer></Footer>
     </Container>

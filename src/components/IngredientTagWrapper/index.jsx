@@ -1,7 +1,7 @@
 import { Container, Ingredients } from "./styles";
-import { IngredientTag } from "../IngredientTag";
+import { DishIngredientTag } from "../DishIngredientTag";
 
-export function IngredientTagWrapper({ icon, title, data, ...rest }) {
+export function IngredientTagWrapper({ title, isNew, value, ...rest }) {
   return (
     <Container>
       <label>
@@ -9,13 +9,12 @@ export function IngredientTagWrapper({ icon, title, data, ...rest }) {
       </label>
 
       <Ingredients>
-        {
-          data.ingredients.map( ingredient => 
-            <IngredientTag key={ingredient.id} name={ingredient.name} className="light" />
-          )
-        }
+        <DishIngredientTag 
+          isNew={isNew} 
+          value={value} 
+          {...rest} 
+        />
       </Ingredients>
-
 
     </Container>
   );

@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, DishOrder } from "./styles";
 import { QtySelect } from "../QtySelect";
 import { Button } from "../Button";
 
@@ -12,9 +12,14 @@ export function DishCard({ data }) {
       <FiHeart />    
       <img src={FoodImg} alt="" />
       <h1>{data.name}</h1>
-      <p>{`R$ ${data.price}`}</p>
-      <QtySelect value="01" />
-      <Button value="incluir" />
+      <p>{data.description}</p>
+      <h2>{`R$ ${data.price}`}</h2>
+
+      <DishOrder>
+        <QtySelect value="01" />
+        <Button value="incluir" />
+      </DishOrder>
+
     </Container>
   );
 };

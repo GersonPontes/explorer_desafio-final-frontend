@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"; 
 
 export const Container = styled.div`
   width: 100%;
@@ -14,9 +15,17 @@ export const Container = styled.div`
 
 export const Main = styled.div`
   grid-area: "content";
-  padding: 3.6rem 5.6rem 5.4rem;
+  padding: 4rem 10rem 5.4rem;
 
   overflow-y: auto;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+    padding: 3.8rem 8rem 5.4rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    padding: 3.6rem 5.6rem 5.4rem;
+  }
 
   > a {
     font-family: "Poppins", sans-serif;
@@ -44,5 +53,69 @@ export const Main = styled.div`
 export const Form = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3.2rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+    gap: 2.4rem;
+  }
+`;
+
+export const FormPt1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3.2rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+`;
+
+export const FormPt2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 3.2rem;  
+
+  > div:nth-child(1) {
+    width: 75%;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+      width: 100%;
+    }
+  }
+
+  > div:nth-child(2) {
+    width: 25%;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+      width: 100%;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+    flex-direction: column;
+    gap: 2.4rem;  
+  }
+`;
+
+export const FormPt3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 3.2rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  > div:nth-child(2) {
+    width: 25%;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+      width: 100%;
+    }
+  }
 `;

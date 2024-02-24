@@ -10,7 +10,7 @@ export const Container = styled.div`
   }
 
   > div {
-    margin-top: .8rem;
+    margin-top: 1.6rem;
   }
 `;
 

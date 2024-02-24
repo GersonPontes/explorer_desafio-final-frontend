@@ -16,30 +16,35 @@ export function Home() {
             {
               id: 1,
               name: "Salada Ravanello",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "49,97"
             },
             {
               id: 2,
               name: "Spaguetti Gambe >",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "79,97"
             },
             {
               id: 3,
               name: "Suco de maracujá",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "13,97"
             },
             {
               id: 4,
               name: "Suco de maracujá",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "13,97"
             },
             {
               id: 5,
               name: "Suco de maracujá",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "13,97"
             }
@@ -51,18 +56,21 @@ export function Home() {
             {
               id: 1,
               name: "Prugna Pie",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "79,97"
             },
             {
               id: 2,
               name: "Peachy pastrie",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "32,97"
             },
             {
               id: 3,
               name: "Peachy pastrie",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "32,97"
             }
@@ -74,18 +82,21 @@ export function Home() {
             {
               id: 1,
               name: "Espresso",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "15,97"
             },
             {
               id: 2,
               name: "Suco de maracujá",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "13,97"
             },
             {
               id: 3,
               name: "Peachy pastrie",
+              description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
               image: "img",
               price: "32,97"
             }

@@ -1,12 +1,23 @@
-import { Container, IngredientsList } from "./styles";
+import { Container, DishImg, DishDescription, IngredientsList, DishOrder } from "./styles";
 import { IngredientTag } from "../IngredientTag";
+import { QtySelect } from "../QtySelect";
+import { Button } from "../Button";
+
+import { PiNewspaperClipping } from 'react-icons/pi';
 
 export function DishDetails({ data, ...rest }) {
   return ( 
     <Container {...rest}>
-      <img src={data.image.FoodImg} alt={data.name} />
-      <h1>{data.name}</h1>
-      <p>{data.description}</p>
+
+      <DishImg>
+        <img src={data.image.FoodImg} alt={data.name} />
+      </DishImg>
+
+      <DishDescription>
+        <h1>{data.name}</h1>
+        <p>{data.description}</p>
+      </DishDescription>
+
       <IngredientsList>
         {
           data.ingredients.map( ingredient => 
@@ -14,6 +25,12 @@ export function DishDetails({ data, ...rest }) {
           )
         }
       </IngredientsList>
+
+      <DishOrder>
+        <QtySelect value="01" />
+        <Button value="pedir ∙ R$ 25,00" icon={PiNewspaperClipping} />
+      </DishOrder>
+
     </Container>
   );
 };

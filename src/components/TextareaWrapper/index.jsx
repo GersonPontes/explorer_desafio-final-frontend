@@ -1,5 +1,4 @@
-import { Container } from "./styles";
-import { Textarea } from "../Textarea";
+import { Container, Textarea } from "./styles";
 
 export function TextareaWrapper({ title, value, id, ...rest }) {
   return (
@@ -10,7 +9,7 @@ export function TextareaWrapper({ title, value, id, ...rest }) {
 
       <Textarea 
         id={id}
-        value={value}
+        placeholder={value}
         {...rest}
       />
     </Container>

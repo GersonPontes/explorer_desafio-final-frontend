@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-bottom: 2.4rem;
+  width: 100%;
 
   > span {
     font-family: "Roboto", sans-serif;
@@ -12,6 +12,6 @@ export const Container = styled.div`
   }
 
   > div {
-    margin-top: 3.4rem;
+    margin-top: 1.6rem;
   }
 `;

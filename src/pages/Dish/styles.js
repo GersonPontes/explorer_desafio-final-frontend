@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   width: 100%;
@@ -14,9 +15,17 @@ export const Container = styled.div`
 
 export const Main = styled.div`
   grid-area: "content";
-  padding: 3.6rem 5.6rem 5.4rem;
+  padding: 2.4rem 10rem 5.4rem;
 
   overflow-y: auto;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+    padding: 2.4rem 8rem 5.4rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    padding: 3.6rem 5.6rem 5.4rem;
+  }
 
   > a {
     font-family: "Poppins", sans-serif;
@@ -26,14 +35,11 @@ export const Main = styled.div`
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
 
     svg {
-      font-size: 2.2rem;
+      font-size: 2.8rem;
+
+      @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
+        font-size: 2.2rem;
+      }
     }
   }
-`;
-
-export const DishOrder = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
 `;

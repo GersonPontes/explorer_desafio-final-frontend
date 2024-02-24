@@ -13,6 +13,7 @@ export function SignUp() {
         <h1>food explorer</h1>
       </Header>
       <Form>
+        <h2>Crie sua conta</h2>
         <InputWrapper title="Seu nome" type="text" id="name" placeholder="Exemplo: Maria da Silva" />
         <InputWrapper title="Email" type="text" id="email" placeholder="Exemplo: exemplo@exemplo.com.br" />
         <InputWrapper title="Senha" type="password" id="password" placeholder="No mínimo 6 caracteres" />
