@@ -14,6 +14,7 @@ export const Container = styled.div`
 
   @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
     padding: 5.6rem 6rem 2.4rem;
+    gap: 2rem;
   }
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
@@ -40,15 +41,6 @@ export const Container = styled.div`
 
   > div:nth-child(5) {
     max-width: fit-content;
-
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-      display: none;
-    }
-  }
-
-  > svg:nth-child(6) {
-    font-size: 8rem;
-    color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
     @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
       display: none;
@@ -129,6 +121,24 @@ export const Cart = styled.div`
     @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
       font-size: 3rem;
+    }
+  }
+`;
+
+export const Logout = styled.div`
+  display: block;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    display: none;
+  }
+
+  > svg {
+    display: block;
+    font-size: 3rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      display: none;
     }
   }
 `;

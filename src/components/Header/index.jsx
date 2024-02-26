@@ -1,4 +1,7 @@
-import { Container, Logo, Cart } from "./styles";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
+
+import { Container, Logo, Cart, Logout } from "./styles";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
@@ -8,6 +11,14 @@ import { RxExit } from "react-icons/rx";
 import { CgSearch } from "react-icons/cg";
 
 export function Header() {
+  const { signOut } = useAuth();
+  const navigate = useNavigate();
+
+  function handleSignOut() {
+    signOut();
+    navigate("/");
+  };
+
   return (
     <Container>
       <FiMenu />
@@ -24,8 +35,10 @@ export function Header() {
 
       <Input placeholder="Busque por pratos ou ingredientes" icon={CgSearch} />
       <Button icon={PiNewspaperClipping} value="Pedidos (0)" />
-      <RxExit />
 
+      <Logout onClick={handleSignOut}>
+        <RxExit />
+      </Logout>  
     </Container>
   );
 };

@@ -18,6 +18,10 @@ export const Container = styled.div`
     margin-left: 1.6rem;
     font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+      margin-left: .5rem;
+    }
   }
 
   > input {
@@ -34,7 +38,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.LIGHT_200};
 
     @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
-      padding: 1.6rem 1.4rem;
+      padding: 1.6rem 1rem;
     }
 
     &::placeholder {
