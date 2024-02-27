@@ -1,19 +1,14 @@
 import { Container, Ingredients } from "./styles";
-import { DishIngredientTag } from "../DishIngredientTag";
 
-export function IngredientTagWrapper({ title, isNew, value, ...rest }) {
+export function IngredientTagWrapper({ children }) {
   return (
     <Container>
       <label>
-        {title}
+        Ingredientes
       </label>
 
       <Ingredients>
-        <DishIngredientTag 
-          isNew={isNew} 
-          value={value} 
-          {...rest} 
-        />
+        {children}
       </Ingredients>
 
     </Container>

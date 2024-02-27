@@ -11,7 +11,7 @@ export function AdminRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/dish/:id" element={<Dish />} />
       <Route path="/newdish" element={<NewDish />} />
-      <Route path="/editdish" element={<EditDish />} />
+      <Route path="/editdish/:id" element={<EditDish />} />
     </Routes>
   );
 };
