@@ -1,3 +1,5 @@
+import { api } from "../../services/api";
+
 import { Container, DishImg, DishDescription, IngredientsList, DishOrder } from "./styles";
 import { IngredientTag } from "../IngredientTag";
 import { QtySelect } from "../QtySelect";
@@ -10,7 +12,7 @@ export function DishDetails({ data, ...rest }) {
     <Container {...rest}>
 
       <DishImg>
-        <img src={data.image.FoodImg} alt={data.name} />
+        <img src={`${api.defaults.baseURL}/files/${data.image}`} alt={data.name} />
       </DishImg>
 
       <DishDescription>

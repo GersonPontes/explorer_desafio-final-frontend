@@ -19,10 +19,14 @@ export function Header({...rest}) {
     navigate("/");
   };
 
+  function handleGoHome() {
+    navigate("/");
+  };
+
   return (
     <Container>
       <FiMenu />
-      <Logo>
+      <Logo onClick={handleGoHome}>
         <svg viewBox="0 0 26 31" fill="none">
           <path d="M13 0.366394L25.9904 7.86639V22.8664L13 30.3664L0.00961876 22.8664V7.86639L13 0.366394Z" fill=""/>
         </svg>

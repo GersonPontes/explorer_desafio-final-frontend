@@ -1,22 +1,25 @@
-import { Container, DishOrder } from "./styles";
+import { api } from "../../services/api";
+
+import { Container, DishDetails, DishOrder } from "./styles";
 import { QtySelect } from "../QtySelect";
 import { Button } from "../Button";
 
 import { FiHeart } from "react-icons/fi";
 
-import FoodImg from "../../assets/food1.png";
-
 export function DishCard({ data, ...rest }) {
   return (
-    <Container {...rest}>
-      <FiHeart />    
-      <img src={FoodImg} alt="" />
-      <h1>{data.name}</h1>
-      <p>{data.description}</p>
-      <h2>{`R$ ${data.price}`}</h2>
+    <Container>
+      <FiHeart />
+
+      <DishDetails {...rest} >
+        <img src={`${api.defaults.baseURL}/files/${data.image}`} alt="data.name" />
+        <h1>{data.name}</h1>
+        <p>{data.description}</p>
+        <h2>{`R$ ${data.price}`}</h2>
+      </DishDetails>     
 
       <DishOrder>
-        <QtySelect value="01" />
+        <QtySelect />
         <Button value="incluir" />
       </DishOrder>
 

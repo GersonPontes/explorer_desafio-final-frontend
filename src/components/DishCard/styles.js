@@ -29,7 +29,13 @@ export const Container = styled.div`
     font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
   }
+`;
 
+export const DishDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   > img {
     width: 17.6rem;
     height: 17.6rem;

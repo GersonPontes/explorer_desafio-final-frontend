@@ -18,6 +18,8 @@ export function Dish() {
   const [ description, setDescription ] = useState("");
   const [ ingredients, setIngredients ] = useState([]);
 
+  const [ image, setImage ] = useState("");
+
   const params = useParams(); 
   const navigate = useNavigate(); 
 
@@ -33,6 +35,7 @@ export function Dish() {
       setCategory(response.data.category);
       setDescription(response.data.description);
       setIngredients(response.data.ingredients);
+      setImage(response.data.image);
     };
     fetchDish()
   }, []);
@@ -46,7 +49,7 @@ export function Dish() {
           icon={SlArrowLeft} 
           onClick={handleBack}
         />
-        <DishDetails data={{ name, description, price, ingredients, image: {FoodImg} }} />     
+        <DishDetails data={{ name, description, price, ingredients, image }} />     
       </Main>
       <Footer></Footer>
     </Container>

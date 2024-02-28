@@ -23,6 +23,9 @@ export function EditDish() {
   const [ category, setCategory ] = useState("");
   const [ description, setDescription ] = useState("");
 
+  const [ image, setImage ] = useState("");
+  const [ imageName, setImageName ] = useState("Selecione imagem");
+
   const [ ingredients, setIngredients ] = useState([]);
   const [ newIngredient, setNewIngredient ] = useState("");
 
@@ -39,6 +42,17 @@ export function EditDish() {
 
   function handleRemoveIngredients(deleted) {
     setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted))
+  };
+
+  async function handleChangeDishImg(e) {
+    if(e.target.files[0]) {
+      setImage(e.target.files[0]);
+      setImageName(e.target.files[0].name);
+    } else {
+      setImage("");
+      const response = await api.get(`/dishes/${params.id}`);
+      setImageName(response.data.image);
+    }
   };
 
   async function handleUpdateDish() {
@@ -73,8 +87,15 @@ export function EditDish() {
         ingredients
       });
 
+      if(image) {
+        const fileUploadForm = new FormData();
+        fileUploadForm.append("dishImg", image);
+    
+        await api.patch(`/dishes/${params.id}`, fileUploadForm);
+      } 
+
       alert("Prato atualizado com sucesso!");
-      handleBack();
+      navigate("/");
       
     } catch (error) {
       if(error.response){
@@ -94,7 +115,7 @@ export function EditDish() {
 
       try {
         await api.delete(`/dishes/${params.id}`);
-        handleBack();
+        navigate("/");
         
       } catch(error) {
         if(error.response){
@@ -119,6 +140,7 @@ export function EditDish() {
       setPrice(response.data.price);
       setCategory(response.data.category);
       setDescription(response.data.description);
+      setImageName(response.data.image);
 
       setIngredients(response.data.ingredients.map( ingredient => {
         return ingredient.name
@@ -140,7 +162,12 @@ export function EditDish() {
         <h1>Editar Prato</h1>
         <Form>
           <FormPt1>
-            <InputFileWrapper title="Selecione imagem" id="image" icon={FiUpload} />
+            <InputFileWrapper 
+              title={imageName} 
+              id="image" 
+              icon={FiUpload} 
+              onChange={handleChangeDishImg}
+            />
             <InputWrapper 
               title="Nome" 
               type="text" 
