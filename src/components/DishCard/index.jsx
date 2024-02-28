@@ -6,9 +6,9 @@ import { FiHeart } from "react-icons/fi";
 
 import FoodImg from "../../assets/food1.png";
 
-export function DishCard({ data }) {
+export function DishCard({ data, ...rest }) {
   return (
-    <Container>
+    <Container {...rest}>
       <FiHeart />    
       <img src={FoodImg} alt="" />
       <h1>{data.name}</h1>

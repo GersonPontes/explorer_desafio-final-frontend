@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { api } from "../../services/api";
+
 import { Container, Main } from "./styles";
 import { SlArrowLeft } from "react-icons/sl";
 import { Header } from "../../components/Header";
@@ -8,26 +12,41 @@ import { Footer } from "../../components/Footer";
 import FoodImg from "../../assets/food1.png";
 
 export function Dish() {
+  const [ name, setName ] = useState("");
+  const [ price, setPrice ] = useState("");
+  const [ category, setCategory ] = useState("");
+  const [ description, setDescription ] = useState("");
+  const [ ingredients, setIngredients ] = useState([]);
+
+  const params = useParams(); 
+  const navigate = useNavigate(); 
+
+  function handleBack() {
+    navigate(-1);
+  };
+
+  useEffect(() => {
+    async function fetchDish() {
+      const response = await api.get(`/dishes/${params.id}`);
+      setName(response.data.name);
+      setPrice(response.data.price);
+      setCategory(response.data.category);
+      setDescription(response.data.description);
+      setIngredients(response.data.ingredients);
+    };
+    fetchDish()
+  }, []);
+
   return (
     <Container>
       <Header />
       <Main>
-        <ButtonText value="voltar" icon={SlArrowLeft} />
-        <DishDetails 
-          data={{
-            name: "Salada Ravanello",
-            description: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.",
-            image: {FoodImg},
-            ingredients: [ 
-              {id: 1, name: "alface"},
-              {id: 2, name: "cebola"},
-              {id: 3, name: "pão naan"},
-              {id: 4, name: "pepino"},
-              {id: 5, name: "rabanete"},
-              {id: 6, name: "tomate"}
-            ]
-          }}        
-        />     
+        <ButtonText 
+          value="voltar" 
+          icon={SlArrowLeft} 
+          onClick={handleBack}
+        />
+        <DishDetails data={{ name, description, price, ingredients, image: {FoodImg} }} />     
       </Main>
       <Footer></Footer>
     </Container>

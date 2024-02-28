@@ -10,7 +10,7 @@ import { PiNewspaperClipping } from 'react-icons/pi';
 import { RxExit } from "react-icons/rx";
 import { CgSearch } from "react-icons/cg";
 
-export function Header() {
+export function Header({...rest}) {
   const { signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -33,7 +33,11 @@ export function Header() {
         <PiNewspaperClipping />
       </Cart>
 
-      <Input placeholder="Busque por pratos ou ingredientes" icon={CgSearch} />
+      <Input 
+        placeholder="Busque por pratos ou ingredientes" 
+        icon={CgSearch} 
+        {...rest}
+      />
       <Button icon={PiNewspaperClipping} value="Pedidos (0)" />
 
       <Logout onClick={handleSignOut}>

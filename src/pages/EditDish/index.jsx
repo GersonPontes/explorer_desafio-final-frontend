@@ -126,7 +126,7 @@ export function EditDish() {
 
     };
     fetchDish()
-  }, [])
+  }, []);
 
   return (
     <Container>
