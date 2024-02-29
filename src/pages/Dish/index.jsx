@@ -29,7 +29,15 @@ export function Dish() {
 
   useEffect(() => {
     async function fetchDish() {
-      const response = await api.get(`/dishes/${params.id}`);
+
+      let response
+
+      try {
+        response = await api.get(`/dishes/${params.id}`);
+      } catch {
+        navigate("/");
+      };
+      
       setName(response.data.name);
       setPrice(response.data.price);
       setCategory(response.data.category);

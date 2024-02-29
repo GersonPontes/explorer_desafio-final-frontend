@@ -29,7 +29,7 @@ export function DishDetails({ data, ...rest }) {
       </IngredientsList>
 
       <DishOrder>
-        <QtySelect value="01" />
+        <QtySelect />
         <Button value={`pedir ∙ R$ ${data.price}`} icon={PiNewspaperClipping} />
       </DishOrder>
 

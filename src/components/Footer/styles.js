@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 3;
 
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
 

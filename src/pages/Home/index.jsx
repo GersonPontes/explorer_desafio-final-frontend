@@ -58,7 +58,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewMeals(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewMeals(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -95,7 +95,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewMeals(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewMeals(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -129,7 +129,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewMeals(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewMeals(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -181,7 +181,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewDesserts(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewDesserts(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -218,7 +218,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewDesserts(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewDesserts(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -252,7 +252,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewDesserts(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewDesserts(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -304,7 +304,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewDrinks(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewDrinks(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -341,7 +341,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewDrinks(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewDrinks(2.5);
               break;
             case ( window.innerWidth < 850):
@@ -375,7 +375,7 @@ export function Home() {
             case ( window.innerWidth < 690):
               setSlidesPerViewDrinks(2);
               break;      
-            case ( window.innerWidth < 770):
+            case ( window.innerWidth < 769):
               setSlidesPerViewDrinks(2.5);
               break;
             case ( window.innerWidth < 850):

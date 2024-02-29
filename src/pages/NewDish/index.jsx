@@ -35,7 +35,7 @@ export function NewDish() {
     if(!newIngredient) {
       return
     }
-    setIngredients(prevState => [...prevState, newIngredient]);
+    setIngredients(prevState => [...prevState, newIngredient.trim()]);
     setNewIngredient("");
   };
 
@@ -81,8 +81,6 @@ export function NewDish() {
         category,
         ingredients
       });
-      
-      console.log("ola 2")
 
       const dish_id = dish.data;      
 

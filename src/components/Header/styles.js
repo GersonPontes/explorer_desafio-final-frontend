@@ -5,6 +5,8 @@ export const Container = styled.div`
   width: 100%;
   padding: 5.6rem 10rem 2.4rem;
 
+  position: relative;
+
   grid-area: "header";
   display: flex;
   align-items: center;
@@ -33,13 +35,13 @@ export const Container = styled.div`
     }
   }
 
-  > div:nth-child(4) {
+  > div:nth-child(5) {
     @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
       display: none;
     }
   }
 
-  > div:nth-child(5) {
+  > div:nth-child(6) {
     max-width: fit-content;
 
     @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
@@ -140,5 +142,70 @@ export const Logout = styled.div`
     @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
       display: none;
     }
+  }
+`;
+
+export const Menu = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: ${({ theme }) => theme.COLORS.DARK_400};
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;  
+  
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .6s ease-in-out;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+   
+    &[data-menu-is-open="true"] {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  };
+`;
+
+export const MenuHeader = styled.div`
+  width: 100%;
+  height: 11.4rem;
+  display: flex;
+  align-items: center;
+  padding: 5.6rem 2.8rem 2.4rem;
+  gap: 1.6rem;
+
+  background-color: ${({ theme }) => theme.COLORS.DARK_700};
+
+  > svg {
+    font-size: 3rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  }
+
+  > h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: auto;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  }
+`
+
+export const MenuMain = styled.div`
+  padding: 3.6rem 2.8rem;
+`;
+
+export const MenuFooter = styled.div`
+  margin: 0 2.8rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000 };
+
+  > a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 2.4rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_300};
   }
 `;

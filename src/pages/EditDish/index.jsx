@@ -36,7 +36,7 @@ export function EditDish() {
     if(!newIngredient) {
       return
     }
-    setIngredients(prevState => [...prevState, newIngredient]);
+    setIngredients(prevState => [...prevState, newIngredient.trim()]);
     setNewIngredient("");
   };
 
