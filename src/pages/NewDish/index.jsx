@@ -66,7 +66,7 @@ export function NewDish() {
     if(newIngredient) {
       return alert("Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique em adicionar ou deixe o campo vazio");
      };
-    if(!price) {
+    if(!price || price == 0) {
       return alert("Informe o valor do prato");
     };
     if(!description) {
@@ -169,7 +169,12 @@ export function NewDish() {
               id="price" 
               placeholder="00,00" 
               className="dark" 
-              onChange={e => setPrice(e.target.value)}
+              value={price}
+              onChange={(e) => {
+                let value = e.target.value.replace(/[^0-9]/g, '');
+                value = (Number(value) / 100).toFixed(2);
+                setPrice(value);
+              }} 
             />
           </FormPt2>
 

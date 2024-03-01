@@ -98,7 +98,7 @@ export function Header({ onClick, ...rest}) {
 
         {
           user.role == USER_ROLE.ADMIN ? 
-          <Button value={"Novo prato"} />
+          <Button value={"Novo prato"} onClick={handleNewDish} />
           :
           <Button icon={PiNewspaperClipping} value="Pedidos (0)" />
         }
