@@ -9,8 +9,6 @@ import { ButtonText } from "../../components/ButtonText";
 import { DishDetails } from "../../components/DishDetails";
 import { Footer } from "../../components/Footer";
 
-import FoodImg from "../../assets/food1.png";
-
 export function Dish() {
   const [ name, setName ] = useState("");
   const [ price, setPrice ] = useState("");
@@ -37,7 +35,7 @@ export function Dish() {
       } catch {
         navigate("/");
       };
-      
+
       setName(response.data.name);
       setPrice(response.data.price);
       setCategory(response.data.category);
@@ -57,7 +55,7 @@ export function Dish() {
           icon={SlArrowLeft} 
           onClick={handleBack}
         />
-        <DishDetails data={{ name, description, price, ingredients, image }} />     
+        <DishDetails data={{ id:params.id, name, description, price, ingredients, image }} />     
       </Main>
       <Footer></Footer>
     </Container>

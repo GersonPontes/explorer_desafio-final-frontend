@@ -8,12 +8,22 @@ export const Container = styled.div`
   "dishImg dishIngredients" 
   "dishImg dishOrder";
 
+  .btnEdit {
+    width: fit-content;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
     grid-template-areas: 
     "dishImg" 
     "dishDescription" 
     "dishIngredients"
     "dishOrder";
+
+    .btnEdit {
+      width: 100%;      
+    }
   }
 `;
 

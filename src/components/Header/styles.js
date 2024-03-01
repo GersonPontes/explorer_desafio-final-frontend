@@ -34,32 +34,40 @@ export const Container = styled.div`
       font-size: 3rem;
     }
   }
-
-  > div:nth-child(5) {
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-      display: none;
-    }
-  }
-
-  > div:nth-child(6) {
-    max-width: fit-content;
-
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-      display: none;
-    }
-  }
 `;
 
 export const Logo = styled.div`
   width: fit-content;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
   gap: 1rem;
 
   @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    flex-direction: row;
+    align-items: center;
     gap: .8rem;
   }
 
+  > p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    color: ${({ theme }) => theme.COLORS.CAKE_200};
+    font-size: 1.2rem;
+
+    margin-top: -1.5rem;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      margin-top: .4rem;
+    }
+  }
+`
+export const LogoName = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
   > svg {
     width: 3rem;
     height: 3rem;
@@ -86,7 +94,7 @@ export const Logo = styled.div`
       font-size: 2.1rem;
     }
   } 
-`
+`;
 
 export const Cart = styled.div`
   display: none;
@@ -124,6 +132,23 @@ export const Cart = styled.div`
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
       font-size: 3rem;
     }
+  }
+`;
+
+export const Search = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    display: none;
+  }
+
+  >div:nth-child(2){
+    width: fit-content;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
   }
 `;
 
@@ -197,9 +222,7 @@ export const MenuMain = styled.div`
 
 export const MenuFooter = styled.div`
   margin: 0 2.8rem;
-  padding-bottom: 1rem;
-
-  border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000 };
+  padding-bottom: 1rem; 
 
   > a {
     font-family: "Poppins", sans-serif;
@@ -207,5 +230,8 @@ export const MenuFooter = styled.div`
     line-height: 140%;
     font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
+    border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000 };
+    padding-bottom: 1rem; 
+    margin-top: 1rem;
   }
 `;

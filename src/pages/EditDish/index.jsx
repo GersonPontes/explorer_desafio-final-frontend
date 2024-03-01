@@ -80,8 +80,8 @@ export function EditDish() {
 
     try {
       await api.put(`/dishes/${params.id}`, {
-        name,
-        description,
+        name: name.trim(),
+        description: description.trim(),
         price,
         category,
         ingredients

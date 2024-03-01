@@ -15,6 +15,7 @@ export const Container = styled.div`
   line-height: 2.4rem;
   font-size: 1.4rem;
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
+  white-space: nowrap;
 
   background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
   border: none;

@@ -75,8 +75,8 @@ export function NewDish() {
 
     try {
       const dish = await api.post("/dishes", {
-        name,
-        description,
+        name: name.trim(),
+        description: description.trim(),
         price,
         category,
         ingredients
