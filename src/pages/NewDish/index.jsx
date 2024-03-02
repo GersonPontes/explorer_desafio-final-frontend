@@ -80,14 +80,14 @@ export function NewDish() {
         price,
         category,
         ingredients
-      });
+      }, { withCredentials:true });
 
       const dish_id = dish.data;      
 
       const fileUploadForm = new FormData();
       fileUploadForm.append("dishImg", image);
 
-      await api.patch(`/dishes/${dish_id}`, fileUploadForm);
+      await api.patch(`/dishes/${dish_id}`, fileUploadForm, { withCredentials:true });
 
       alert("Prato cadastrado com sucesso!");
       navigate("/")

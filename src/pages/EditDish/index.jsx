@@ -85,13 +85,13 @@ export function EditDish() {
         price,
         category,
         ingredients
-      });
+      }, { withCredentials:true });
 
       if(image) {
         const fileUploadForm = new FormData();
         fileUploadForm.append("dishImg", image);
     
-        await api.patch(`/dishes/${params.id}`, fileUploadForm);
+        await api.patch(`/dishes/${params.id}`, fileUploadForm, { withCredentials:true });
       } 
 
       alert("Prato atualizado com sucesso!");
@@ -114,7 +114,7 @@ export function EditDish() {
     if(confirm) {
 
       try {
-        await api.delete(`/dishes/${params.id}`);
+        await api.delete(`/dishes/${params.id}`, { withCredentials:true });
         navigate("/");
         
       } catch(error) {
@@ -135,7 +135,7 @@ export function EditDish() {
 
   useEffect(() => {
     async function fetchDish() {
-      const response = await api.get(`/dishes/${params.id}`);
+      const response = await api.get(`/dishes/${params.id}`, { withCredentials:true });
       setName(response.data.name);
       setPrice(response.data.price);
       setCategory(response.data.category);

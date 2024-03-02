@@ -15,7 +15,7 @@ export function Home() {
   const [ dataDesserts, setDataDesserts ] = useState([]);
   const [ dataDrinks, setDataDrinks ] = useState([]);
 
-  const [search, setSearch] = useState("");
+  const [ search, setSearch ] = useState("");
 
   const [ slidesPerViewMeals, setSlidesPerViewMeals ] = useState(1)
   const [ slidesPerViewDesserts, setSlidesPerViewDesserts ] = useState(1)
@@ -29,9 +29,9 @@ export function Home() {
 
   useEffect(() => {
     async function fetchDishes() {
-      const meals = await api.get(`/dishes?category=meal`);
-      const desserts = await api.get(`/dishes?category=dessert`);
-      const drinks = await api.get(`/dishes?category=drink`);
+      const meals = await api.get(`/dishes?category=meal`, { withCredentials:true });
+      const desserts = await api.get(`/dishes?category=dessert`, { withCredentials:true });
+      const drinks = await api.get(`/dishes?category=drink`, { withCredentials:true });
       setDataMeals(meals.data);
       setDataDesserts(desserts.data);
       setDataDrinks(drinks.data);
@@ -42,9 +42,9 @@ export function Home() {
 
   useEffect(() => {
     async function handleResize() {
-      const meals = await api.get(`/dishes?category=meal&search=${search}`);
-      const desserts = await api.get(`/dishes?category=dessert&search=${search}`);
-      const drinks = await api.get(`/dishes?category=drink&search=${search}`);
+      const meals = await api.get(`/dishes?category=meal&search=${search}`, { withCredentials:true });
+      const desserts = await api.get(`/dishes?category=dessert&search=${search}`, { withCredentials:true });
+      const drinks = await api.get(`/dishes?category=drink&search=${search}`, { withCredentials:true });
 
       switch (true) {
         case ( meals.data.length >= 5):
@@ -425,9 +425,9 @@ export function Home() {
 
   useEffect(() => {
     async function fetchDishes() {
-      const meals = await api.get(`/dishes?category=meal&search=${search}`);
-      const desserts = await api.get(`/dishes?category=dessert&search=${search}`);
-      const drinks = await api.get(`/dishes?category=drink&search=${search}`);
+      const meals = await api.get(`/dishes?category=meal&search=${search}`, { withCredentials:true });
+      const desserts = await api.get(`/dishes?category=dessert&search=${search}`, { withCredentials:true });
+      const drinks = await api.get(`/dishes?category=drink&search=${search}`, { withCredentials:true });
       setDataMeals(meals.data);
       setDataDesserts(desserts.data);
       setDataDrinks(drinks.data);

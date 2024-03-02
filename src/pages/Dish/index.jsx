@@ -31,7 +31,7 @@ export function Dish() {
       let response
 
       try {
-        response = await api.get(`/dishes/${params.id}`);
+        response = await api.get(`/dishes/${params.id}`, { withCredentials:true });
       } catch {
         navigate("/");
       };
