@@ -23,8 +23,22 @@ Versão mobile:
 
 ## ⚙ Como utilizar
 
-###Clonagem
+#### Clonagem: Primeiro, clone o repositório para seu ambiente:
+```bash
+git clone git@github.com:GersonPontes/explorer_desafio-final-frontend.git
+```
 
-Primeiro, clone o repositório para seu ambiente:
+#### Instale as dependências do projeto
+```bash
+npm install
+```
 
-> git clone https://github.com/shyoutarou/REPO_NAME.git 
+#### Inicie o servidor do FrontEnd
+```bash
+npm run dev
+```
+
+#### O terminal irá exibir o endereço local onde a aplicação está sendo executada. Basta digitar o mesmo endereço em seu navegador. O endereço usado na criação do projeto foi:
+```bash
+http://localhost:5173/
+```
