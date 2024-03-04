@@ -70,6 +70,10 @@ http://localhost:5173/
   senha: 123
 ```
 
+#### BackEnd
+
+[acesse o github do BackEnd clicando aqui](https://github.com/GersonPontes/explorer_desafio-final-backend)
+
 ---
 
 ## 💻 Deploy
