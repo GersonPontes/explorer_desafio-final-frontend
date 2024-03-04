@@ -3,6 +3,8 @@
 Desafio final do Explorer, da RocketSeat.\
 Nele realizei a criação do FrontEnd e do BackEnd completo da aplicação.
 
+---
+
 ## 📝 Sobre
 
 A aplicação é um cardápio digital para um restaurante fictício, conhecido como foodExplorer.\
@@ -10,16 +12,35 @@ Possui uma galeria do cardápio dividida em três categorias: refeições, sobre
 O Administrador tem a capacidade de adicionar/editar/remover os pratos.\
 A aplicação é responsiva para a facilitar a sua visualização em computadores e dispositivos móveis
 
+---
+
 ## 📸 Preview
 
-Versão desktop:
+### Versão desktop:
 
 <img src="/src/assets/preview1.png">
 <img src="/src/assets/preview2.png">
 
-Versão mobile:
+### Versão mobile:
 
 <img src="/src/assets/preview3.png">
+
+---
+
+## 🛠 Tecnologias
+Tecnologias utilizadas no projeto:
+
+- Javascript
+- Css
+- ReactJs
+- Vite
+- Axios
+- React Icons
+- React Router Dom
+- Swiper
+- Styled Components
+
+---
 
 ## ⚙ Como utilizar
 
@@ -42,3 +63,17 @@ npm run dev
 ```bash
 http://localhost:5173/
 ```
+
+#### Caso queira acessar a aplicação com uma conta Admin utilizando o login e senha abaixo:
+```bash
+  e-mail: joao@email.com
+  senha: 123
+```
+
+---
+
+## 💻 Deploy
+O BackEnd foi hospedado no **Render**. \
+O Frontend foi hospedado no **Netlify**.
+
+[Acesse a aplicação clicando aqui!](https://foodexplorergpo.netlify.app/)
